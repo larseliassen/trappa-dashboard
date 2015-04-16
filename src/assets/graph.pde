@@ -65,10 +65,10 @@ void theLine() {
     float noiseVal = map(distance, 0, 1, 0, h/3);
 
     noiseSeed(10130);
-    float noiseVal2 = map(socialcast, 0, 1, 0, h/2);
+    float noiseVal2 = map(sound, 0, 1, 0, h/3);
 
     noiseSeed(152);
-    float noiseVal3 = map(sound, 0, 1, 0, h/2);
+    float noiseVal3 = map(socialcast, 0, 1, 0, h/3);
 
     if (passedTime > totalTime) {
 
@@ -115,13 +115,13 @@ void theLine() {
         ellipse(g, noiseVal2/1.5+3, 2, 2);
 
         //Fat line
-        strokeWeight(7);
+        strokeWeight(2);
         stroke(244, 76, 89); // RØD
         line(g, noiseVal/2, g, -noiseVal/2);
 
         //Thin black line
         strokeWeight(1);
-        stroke(30);
+        stroke(100);
         line(g, noiseVal3/2, g, -noiseVal3/2);
 
         savedTime = millis();
