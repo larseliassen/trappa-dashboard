@@ -1,0 +1,27 @@
+.w-widget {
+  margin: 1%;
+  width: 48%;
+
+  font-family: @font-sans;
+
+  .w-widget--dark {
+    background: @bekk-dark;
+    min-height: 110px;
+    position: relative;
+
+    a {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+    }
+  }
+}
+
+@media (max-width: @break-double) {
+  .w-widget {
+    width: 100%;
+    margin: 0 0 5% 0;
+  }
+}

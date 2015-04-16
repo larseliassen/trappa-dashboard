@@ -1,0 +1,38 @@
+/* Mixin
+------------------------------------------------------------------------------*/
+.profilePictureSize(@size) {
+  width: @size;
+  margin: 15px 10px;
+
+  .imgCircle {
+    width: @size;
+    height: @size;
+
+    background-position: 50% 50%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
+}
+
+/* Rules
+------------------------------------------------------------------------------*/
+.profilePicture,
+.profilePicture--small,
+.profilePicture--big {
+  figcaption {
+    text-align: center;
+    font-size: @font-size-meta;
+  }
+}
+
+.profilePicture {
+  .profilePictureSize(150px);
+}
+
+.profilePicture--small {
+  .profilePictureSize(100px);
+}
+
+.profilePicture--big {
+  .profilePictureSize(200px);
+}

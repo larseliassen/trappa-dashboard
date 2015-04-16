@@ -1,0 +1,33 @@
+{
+  "name": "trappa-dashboard",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/larseliassen/trappa-dashboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/larseliassen/trappa-dashboard/issues"
+  },
+  "homepage": "https://github.com/larseliassen/trappa-dashboard",
+  "dependencies": {
+    "browser-sync": "^2.6.4",
+    "d3": "^3.5.5",
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-jshint": "^1.10.0",
+    "gulp-less": "^3.0.2",
+    "gulp-sourcemaps": "^1.5.1",
+    "jshint-stylish": "^1.0.1",
+    "svgify": "0.0.0"
+  },
+  "devDependencies": {
+    "lodash": "^3.6.0"
+  }
+}

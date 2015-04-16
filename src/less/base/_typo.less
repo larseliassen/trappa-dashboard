@@ -1,0 +1,149 @@
+/* Headings
+------------------------------------------------------------------------------*/
+
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
+  line-height: @lineHeight-header;
+
+  a {
+    border: none;
+  }
+}
+
+h1, .h1 {
+  margin-bottom: 0.5em;
+  font-size: @font-size-h1;
+}
+
+h2, .h2 {
+  margin-bottom: 0.2em;
+  font-size: @font-size-h2;
+}
+
+h3, .h3 {
+  margin-top: 1em;
+  margin-bottom: 0.2em;
+  font-size: @font-size-h3;
+}
+
+h4, .h4 {
+  margin-bottom: 0.5em;
+  font-family: @font-sans;
+  font-size: @font-size-ingress;
+  font-weight: normal;
+}
+
+
+/* Typography
+------------------------------------------------------------------------------*/
+.t-sectionHeader {
+  margin-bottom: 1em;
+  overflow: hidden;
+  font-family: @font-sans;
+  font-size: @font-size-sectionHeader;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+
+  span {
+    position: relative;
+    display: inline-block;
+
+    &:before,
+    &:after {
+      position: absolute;
+      top: @font-size-sectionHeader / 2;
+      width: @maxWidth-grid;
+      height: 0;
+      border-top: 1px solid @color-darkGray;
+      content: "";
+
+      .light & {
+        border-color: #000;
+      }
+    }
+
+    &:before {
+      right: 100%;
+      margin-right: @horizontalMargin-sectionHeader;
+    }
+
+    &:after {
+      left: 100%;
+      margin-left: @horizontalMargin-sectionHeader;
+    }
+  }
+}
+
+.t-widgetHeading {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-family: @font-sans;
+  margin-bottom: 10px;
+  color: @color-lightGray;
+
+  a {
+    text-decoration: none;
+    border-bottom-color: transparent;
+    transition: border 0.2s ease-out;
+  }
+
+  a:hover {
+    border-bottom-color: @bekk-red;
+  }
+}
+
+.t-ingress {
+  font-family: @font-sans;
+  font-size: @font-size-ingress;
+}
+
+.t-meta {
+  font-family: @font-sans;
+  font-size: @font-size-meta;
+  line-height: @lineHeight-tight;
+  letter-spacing: @letterSpacing-meta;
+  text-transform: uppercase;
+}
+
+.t-meta--secondary {
+  color: @bekk-red;
+}
+
+.t-nameHeading {
+  text-transform: uppercase;
+}
+
+.t-menuHeading {
+  font-family: @font-sans-light;
+  color: @color-lightGray;
+  font-size: @font-size-label;
+}
+
+@media (max-width: @break-mobile) {
+  body {
+    font-size: 14px;
+  }
+
+  .t-sectionHeader {
+    font-size: 20px;
+
+    span {
+      &:before,
+      &:after {
+        top: 20 / 2 - 1px;
+      }
+    }
+  }
+
+  h1, .h2 {
+    font-size: 18px;
+  }
+
+  h2, .h2 {
+    font-size: 16px;
+  }
+}

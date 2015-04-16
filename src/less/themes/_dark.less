@@ -1,0 +1,29 @@
+.themeDark body {
+  color: @color-gray;
+  background: @background-body;
+
+  /* Anchor
+  ------------------------------------------------------------------------------*/
+  a {
+    color: @color-lightGray;
+  }
+
+  a:hover,
+  a.hover,
+  a:focus,
+  a.focus {
+    border-color: @bekk-red;
+  }
+
+  a.noborder {
+    border: none;
+  }
+
+  a.disabled,
+  button[disabled=disabled] {
+    pointer-events: none;
+    cursor: pointer;
+    color: @color-darkGray;
+    border-color: @color-darkGray;
+  }
+}

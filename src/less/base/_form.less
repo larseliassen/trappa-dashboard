@@ -1,0 +1,41 @@
+label {
+  display: inline-block;
+  margin-top: 0.5em;
+  font-size: @font-size-label;
+  font-size: 1.4rem;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+
+  font-family: @font-sans;
+  font-size: @font-size-default;
+  color: @color-black;
+  border: none;
+}
+
+::-webkit-input-placeholder {
+  color: @color-mediumGray;
+  font-family: @font-sans;
+  font-weight: @font-weight-book;
+}
+
+:-moz-placeholder, // Firefox 18-
+::-moz-placeholder // Firefox 19+
+{
+  color: @color-lightGray;
+}
+
+
+:-ms-input-placeholder {
+  color: @color-lightGray;
+}
+
+.field-validation-error {
+  color: @bekk-red;
+}

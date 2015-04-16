@@ -1,0 +1,678 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Ho",
+				"HoverHandler"
+			],
+			[
+				"get",
+				"getHeight"
+			],
+			[
+				"in",
+				"infinite"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"trig",
+				"triggerEl"
+			],
+			[
+				"rq",
+				"require"
+			],
+			[
+				"backgro",
+				"background"
+			],
+			[
+				"time",
+				"timeStorage"
+			],
+			[
+				"sum",
+				"sumByKey"
+			],
+			[
+				"filt",
+				"filterObjectByKey"
+			],
+			[
+				"len",
+				"length"
+			],
+			[
+				"prop",
+				"properties"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"cel",
+				"cellpadding	Attr"
+			],
+			[
+				"c",
+				"cellpadding	Attr"
+			],
+			[
+				"cell",
+				"cellspacing	Attr"
+			],
+			[
+				"ce",
+				"cellspacing	Attr"
+			],
+			[
+				"destina",
+				"destinationEl"
+			],
+			[
+				"background",
+				"background-position"
+			],
+			[
+				"node",
+				"nodeType"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"sw",
+				"swapBack"
+			],
+			[
+				"Nav",
+				"NavigatorModel"
+			],
+			[
+				"Even",
+				"EventModel"
+			],
+			[
+				"inli",
+				"inline-block"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "gulpfile.js",
+			"settings":
+			{
+				"buffer_size": 1864,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/less/style.less",
+			"settings":
+			{
+				"buffer_size": 20,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/less/components/_header.less",
+			"settings":
+			{
+				"buffer_size": 3047,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/index.html",
+			"settings":
+			{
+				"buffer_size": 718,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/projects/minsparing/web/gulpfile.js",
+			"settings":
+			{
+				"buffer_size": 3810,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 511.0,
+		"last_filter": "inde",
+		"selected_items":
+		[
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"ind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"in",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"comme",
+				"Toggle Comment"
+			],
+			[
+				"INDE",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"inded",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			]
+		],
+		"width": 832.0
+	},
+	"console":
+	{
+		"height": 280.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print 'Please restart Sublime Text to finish installation'"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/projects/trappa-dashboard",
+		"/C/projects/trappa-dashboard/dist",
+		"/C/projects/trappa-dashboard/src",
+		"/C/projects/trappa-dashboard/src/less",
+		"/C/projects/trappa-dashboard/src/less/components",
+		"/C/projects/minsparing",
+		"/C/projects/minsparing/web"
+	],
+	"file_history":
+	[
+		"/C/projects/minsparing/src/js/app.js",
+		"/C/projects/minsparing/src/js/list/list.js",
+		"/C/projects/minsparing/dist/index.html",
+		"/C/projects/minsparing/gulpfile.js",
+		"/C/projects/minsparing/src/scss/style.scss",
+		"/C/projects/minsparing/src/scss/partial/_partial.scss",
+		"/C/projects/minsparing/src/js/list/list.html",
+		"/C/projects/minsparing/src/js/directives/buy/buy.html",
+		"/C/projects/minsparing/src/js/directives/buy/buy.js",
+		"/C/Users/sebastian steinmann.BEKKNO/Dropbox (Personal)/VP-billetter-now.txt",
+		"/C/projects/minsparing/src/js/directives/list/list.html",
+		"/C/projects/minsparing/dist/js/app.js",
+		"/C/projects/minsparing/src/js/directives/list/list.js",
+		"/C/projects/minsparing/src/js/directives/holdings/holdinglist.html",
+		"/C/projects/minsparing/src/scss/partial/_vars.scss",
+		"/C/projects/minsparing/dist/css/style.css",
+		"/C/projects/minsparing/index.html",
+		"/C/projects/minsparing/src/js/directives/holdinglist.html",
+		"/C/projects/animasjon-workshop/js/menu.js",
+		"/C/projects/animasjon-workshop/index.html",
+		"/C/projects/animasjon-workshop/css/base.css",
+		"/C/Users/sebastian steinmann.BEKKNO/AppData/Local/Microsoft/Windows/INetCache/Content.Outlook/98SHTGAP/spørringer på meglerkontor.txt",
+		"/C/projects/animasjon-workshop/css/reset.css",
+		"/C/projects/animasjon-workshop/css/style.css",
+		"/C/projects/animasjon-workshop/README.md",
+		"/C/projects/Bekk.Forside/Bekk.Forside.Web/Bekk.Forside.Web.csproj",
+		"/C/Users/sebastian steinmann.BEKKNO/Desktop/julekalender/luke1.html",
+		"/C/projects/operaen/TextFile1.txt",
+		"/C/Program Files (x86)/EPiServer/Framework/7.0.859.1/Application/UI/ClientResources/EPi/Views/Settings/Settings.js",
+		"/C/projects/Bekk.Forside/Bekk.Forside.Web/packages.config",
+		"/C/Users/sebastian steinmann.BEKKNO/Documents/norgeskart.svg",
+		"/C/projects/animasjon-workshop/js/search.js",
+		"/C/projects/Bekk.Forside/Bekk.Forside.Web/Content/img/logo.svg",
+		"/C/projects/Bekk.Forside/Bekk.Forside.Web/Content/img/search.svg",
+		"/C/projects/operaen/log.txt",
+		"/C/projects/kurs/app/js/timeController.js",
+		"/C/projects/Bekk.Forside/Bekk.Forside.Web/Web/Scripts/components/iframe/iframe.js",
+		"/C/projects/Bekk.Forside/Bekk.Forside.Web/Web/.jshintrc",
+		"/C/Users/sebastian steinmann.BEKKNO/Downloads/google_5000000/google_5000000.txt",
+		"/C/projects/kurs/app/js/app.js",
+		"/C/projects/kurs/app/js/util.js",
+		"/C/projects/kurs/app/js/timestorage.js",
+		"/C/projects/kurs/index.html",
+		"/C/projects/kurs/dist/js/app.js",
+		"/C/projects/kurs/karma.conf.js",
+		"/C/projects/kurs/Gulpfile.js",
+		"/C/projects/kurs/test/unit/controllerSpec.js",
+		"/C/projects/kurs/app/js/timeStorage.js",
+		"/C/projects/kurs/steps/step-6-sourcemaps/Gulpfile.js",
+		"/C/projects/kurs/steps/step-3-concat/Gulpfile.js",
+		"/C/projects/kurs/steps/step-3-concat/TimeController.js",
+		"/C/projects/kurs/steps/step-4-live-reload/Gulpfile.js",
+		"/C/projects/kurs/.jshintrc",
+		"/C/projects/kurs/steps/step-4-concat/Gulpfile.js",
+		"/C/projects/kurs/steps/step-3-live-reload/Gulpfile.js",
+		"/C/projects/kurs/steps/step-1-gulp-init/Gulpfile.js",
+		"/C/projects/kurs/steps/step-minifisere/Gulpfile.js",
+		"/C/projects/kurs/app/js/TimekeeperController.js",
+		"/C/projects/kurs/app/js/TimestorageFactory.js",
+		"/C/projects/kurs/steps/step-5-test/karma.conf.js",
+		"/C/projects/kurs/steps/start-app/app.js",
+		"/C/projects/kurs/app/js/TimeController.js",
+		"/C/projects/kurs/steps/step-3-live-reload/readme.md",
+		"/C/projects/angular-phonecat/test/unit/controllersSpec.js",
+		"/C/projects/angular-phonecat/test/karma.conf.js",
+		"/C/projects/kurs/dist/js/bundle.js",
+		"/C/projects/kurs/steps/step-1-gulp-init/jshintrc",
+		"/C/projects/kurs/steps/step-2-watch/Gulpfile.js",
+		"/C/projects/kurs/steps/step-4-concat/app.js",
+		"/C/projects/dings/app/js/shows/showFactory.js",
+		"/C/projects/dings/app/js/shows/showController.js",
+		"/C/projects/kurs/steps/step-3-live-reload/live-reload.js",
+		"/C/projects/kurs/readme.txt",
+		"/C/projects/kurs/live-reload.js",
+		"/C/projects/kurs/package.json",
+		"/C/projects/angular-phonecat/test/e2e/README.md",
+		"/C/projects/dings/app/js/app.js",
+		"/C/projects/dings/index.html",
+		"/C/projects/dings/dist/js/app.js",
+		"/C/projects/dings/package.json",
+		"/C/Users/sebastian steinmann.BEKKNO/AppData/Roaming/npm/node_modules/bower/lib/util/cmd.js",
+		"/C/projects/angular-gulp-seed/package.json",
+		"/C/projects/angular-gulp-seed/app/scripts/main.js",
+		"/C/projects/angular-gulp-seed/Gulpfile.js",
+		"/C/projects/angular-gulp-seed/app/index.html",
+		"/C/projects/angular-gulp-seed/.jshintrc",
+		"/C/projects/angular-phonecat/test/e2e/scenarios.js",
+		"/C/projects/angular-phonecat/app/js/controllers.js",
+		"/C/projects/angular-phonecat/app/js/app.js",
+		"/C/projects/angular-phonecat/app/index.html",
+		"/C/projects/.gitconfig",
+		"/C/projects/angular-phonecat/npm-debug.log",
+		"/C/projects/angular-phonecat/bower.json",
+		"/C/projects/angular-phonecat/.bowerrc",
+		"/C/projects/angular-phonecat/.travis.yml",
+		"/C/projects/angular-phonecat/package.json",
+		"/C/projects/TypeTest/index.html",
+		"/C/Users/sebastian steinmann.BEKKNO/Desktop/menytest.html",
+		"/C/Users/sebastian steinmann.BEKKNO/Documents/Statnett/norgeskart copy.svg",
+		"/C/Users/sebastian steinmann.BEKKNO/Desktop/email/email.html",
+		"/C/projects/NyeStatnett/.git/rebase-apply/patch",
+		"/C/projects/NyeStatnett/.git/rebase-apply/0303",
+		"/C/projects/NyeStatnett/.git/rebase-apply/rewritten",
+		"/C/projects/NyeStatnett/.git/rebase-apply/rebasing",
+		"//openelec/Userdata/advancedsettings.xml",
+		"/C/Users/sebastian steinmann.BEKKNO/Downloads/lissie_opera_ipad_vod_ead8f135.m3u8",
+		"/C/Users/sebastian steinmann.BEKKNO/Downloads/ffc71b96-5362-4858-8955-afad9726ce04_Layer5_vod.m3u8",
+		"/C/svn/CustomerWeb/Trunk/STBMyPage/STBMyPage.Web/Scripts/STBMyPage/views/pages.js",
+		"/C/Users/sebastian steinmann.BEKKNO/Downloads/basic-email-template/stylesheets/email.css",
+		"/C/Users/sebastian steinmann.BEKKNO/Downloads/basic-email-template/basic.html",
+		"/C/Users/sebastian steinmann.BEKKNO/Desktop/email.html",
+		"/C/Metodekort/PDF/2ccfe4d9-e96e-417c-b529-00ecf7c44610/80b32237-e31b-44b2-b10f-52b11abf1888.html",
+		"/C/svn/CustomerWeb/Trunk/STBMyPage/STBMyPage.Web/Views/Home/NytegningBredband.cshtml",
+		"/C/Users/sebastian steinmann.BEKKNO/Desktop/STB/Min side STB_files/fonts.css",
+		"/C/Users/sebastian steinmann.BEKKNO/Desktop/STB/Min side STB_files/productlist.css",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/C/projects/STBMyPage/autodoc/index.html",
+		"/C/svn/CustomerWeb/Trunk/STBMyPage/STBMyPage.Web/Scripts/STBMyPage/out/data.json",
+		"/C/projects/STBMyPage/autodoc/docs.js",
+		"/C/Users/sebastian steinmann.BEKKNO/Desktop/perallenkode.js",
+		"/C/projects/frontend101/kurs1/del2/notater2.txt",
+		"/C/projects/frontend101/kurs1/del2/presentasjon/index.html",
+		"/C/projects/frontend101/kurs1/del2/oppgave/css/main.css",
+		"/C/projects/frontend101/kurs1/del1/losning/css/main.css",
+		"/C/projects/frontend101/kurs1/del2/losning/css/main.css",
+		"/C/Users/sebastian steinmann.BEKKNO/Desktop/STB/Min side STB_files/menu.css",
+		"/C/Users/sebastian steinmann.BEKKNO/Desktop/STB/Min side STB_files/product-grid.css",
+		"/C/Users/sebastian steinmann.BEKKNO/Desktop/STB/Min side STB_files/header.css"
+	],
+	"find":
+	{
+		"height": 64.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"søk",
+			"textColor",
+			"\"app\"",
+			"this",
+			"Bekk.Timeforing.Client",
+			"SearchController",
+			">\n",
+			"keyfig",
+			"GoogleAnalyticsController",
+			"Forestillinger/Don-Giovanni",
+			"mesteraften",
+			"steinmann.sebastian@gmail.com",
+			"mail.orsus@gmail.com",
+			"mail.orsus",
+			"\">\n",
+			"'",
+			"I'm",
+			" Set-EnvironmentVariable",
+			"<a",
+			"<a ",
+			"<a",
+			"width:",
+			"width",
+			"speach-icon",
+			"seper",
+			"line",
+			"background",
+			".navigation",
+			"navigation",
+			"question {",
+			"question",
+			"Element.",
+			"OutdoorChannel_100x100.png",
+			"History_100x100.png",
+			"FoodNetwork_HD_100x100.png",
+			"/Images/STBMyPage/channels",
+			"/Images/STBMyPage/icons/",
+			"ie",
+			"getDocHeight",
+			"colorkeys.js",
+			"this.ul",
+			"forms",
+			"'"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\"",
+			"Discovery_World_100x100.png",
+			"Discovery_Science_100x100v2.png",
+			"Discovery_Investigation_100.png",
+			"./Min side STB_files",
+			"",
+			"-"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "gulpfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1864,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1412,
+								1412
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 216.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/less/style.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 20,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18,
+								18
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/less/components/_header.less",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3047,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								574,
+								574
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 718,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								686,
+								686
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 108.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/projects/minsparing/web/gulpfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3810,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3810,
+								3454
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 4320.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 44.0
+	},
+	"input":
+	{
+		"height": 55.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "trappa.sublime-project",
+	"replace":
+	{
+		"height": 84.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"inde",
+				"C:\\Users\\sebastian steinmann.BEKKNO\\Downloads\\basic-email-template\\stylesheets\\email.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 567.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

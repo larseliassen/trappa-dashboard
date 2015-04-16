@@ -1,0 +1,30 @@
+.card {
+  width: 100%;
+  position: relative;
+}
+
+.card-face {
+  width: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.5s ease-out;
+}
+
+.card-back {
+  position: relative;
+  transform: rotateX(-180deg);
+}
+
+.card.flipped .card-back {
+  transform: rotateX(0deg);
+}
+
+.card-front {
+  position: absolute;
+  top: 0;
+  height: 118px;
+}
+
+.card.flipped .card-front {
+  transform: rotateX(180deg);
+  z-index: -1;
+}

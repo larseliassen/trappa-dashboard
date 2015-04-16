@@ -1,0 +1,76 @@
+.btn {
+  display: inline-block;
+  padding: 9px 30px 8px 30px;
+
+  font-family: @font-sans;
+  font-size: @font-size-button;
+  line-height: 1;
+  color: @color-lightGray;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid @color-gray;
+
+  transition: background 0.2s ease-out, border 0.2s ease-out;
+
+  &:hover,
+  &:focus {
+    background: @bekk-red;
+    border-color: @bekk-red;
+  }
+}
+
+.btn-download {
+  display: inline-block;
+  background: transparent url('../assets/download.png') no-repeat left center;
+
+  height: 40px;
+  line-height: 42px;
+
+  padding-left: 60px;
+  border-bottom: none;
+  font-family: @font-sans;
+
+  &:hover {
+    color: @bekk-red;
+  }
+}
+
+.btn-arrowDown {
+  background-image: url('../assets/arrowDown.png');
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  display: block;
+  margin: 0 auto;
+  border: none;
+}
+
+.btn-light {
+  color: @color-darkGray;
+}
+
+
+/* Media Queries
+------------------------------------------------------------------------------*/
+@media (max-width: 800px) {
+  .btn {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .btn {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: @break-mobile) {
+  .btn {
+    font-size: 1.6rem;
+  }
+}

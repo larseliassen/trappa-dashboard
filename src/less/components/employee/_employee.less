@@ -1,0 +1,131 @@
+.el-cards {
+  .card {
+    background: #f1f1f1;
+    float: left;
+    width: 213.59px;
+    min-width: 210px;
+    max-width: 220px;
+    height: 300px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-family: Georgia;
+    text-align: center;
+    font-size: 14px;
+    padding: 0 10px;
+    position: relative;
+
+    .m-width(@w) {
+      width: -webkit-calc(@w - 8px);
+      width: -moz-calc(@w - 8px);
+      width: calc(@w - 8px);
+    }
+
+    .m-width(20%);
+
+    @media (max-width: 1119px) {
+      .m-width(25%);
+    }
+
+    @media (max-width: 900px) {
+      .m-width(33.33%);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a > div {
+      color: @color-black;
+    }
+
+    .picture {
+      background: @color-lightGray;
+      width: 140px;
+      height: 140px;
+      border-radius: 9999px;
+      overflow: hidden;
+      margin-left: 26.5px;
+      margin-left: "-webkit-calc(50% - 70px)";
+      margin-left: "-moz-calc(50% - 70px)";
+      margin-left: "calc(50% - 70px)";
+      margin-top: 10px;
+      margin-bottom: 10px;
+      position: relative;
+      -webkit-background-clip: padding-box;
+
+      .status {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.3);
+        color: #ccc;
+        padding: 6px 35px;
+        font-family: "Fedra Serif B Medium",Georgia;
+        font-size: 10px;
+        text-transform: uppercase;
+        height: 3.8em;
+
+        &.notWorking {
+          background-color: rgba(0,0,0,0.7);
+        }
+      }
+    }
+
+    .name {
+      text-transform: uppercase;
+      font-family: "Fedra Serif B Medium",Georgia;
+      font-size: 12px;
+    }
+
+    .line {
+      background: @bekk-red;
+      width: 50px;
+      height: 2px;
+      margin: 8px auto;
+    }
+
+    .title,
+    .department {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-transform: uppercase;
+      white-space: nowrap;
+      font-family: "Fedra Serif B Book Italic",Georgia;
+      font-style: italic;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .department {
+      margin-bottom: 16px;
+    }
+
+    .phone,
+    .email {
+      white-space: nowrap;
+      font-family: Georgia;
+      font-size: 12px;
+      display: inline-block;
+      width: 100%;
+      color: @color-black;
+      border-bottom: none;
+
+      &:hover {
+        color: @bekk-red;
+      }
+    }
+
+    .email {
+      margin-top: 3px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &:hover {
+      .picture .status {
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+    }
+  }
+}

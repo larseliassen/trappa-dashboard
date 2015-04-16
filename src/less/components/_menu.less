@@ -1,0 +1,131 @@
+/* Top menu
+------------------------------------------------------------------------------*/
+@navigation-height: 60px;
+
+.u-container {
+  margin-top: @navigation-height + 100px;
+}
+
+.navigation-wrapper {
+  overflow: hidden;
+  max-width: @maxWidth-grid + (@grid-sizeSpacing * 2);
+  margin: 0 auto;
+}
+
+.navigationFixed {
+  width: 100%;
+  height: @navigation-height;
+
+  background-color: @background-body;
+  border-bottom: 1px solid @color-darkGray;
+  position: fixed;
+  z-index: 1;
+
+  font-family: @font-sans;
+
+  ul {
+    text-align: center;
+    list-style: none;
+    margin-left: 0;
+  }
+
+  li {
+    margin-bottom: 8px;
+
+    a {
+      color: @color-gray;
+      border-bottom: none;
+    }
+
+    a.active {
+      font-weight: bold;
+    }
+  }
+}
+
+.navigation {
+  > li {
+    display: inline-block;
+    zoom: 1;
+    width: 25%;
+    vertical-align: top;
+
+    > a {
+      color: @color-mediumGray;
+      display: inline-block;
+      padding: 10px 0;
+      margin: 1px 0 14px;
+      font-weight: bold;
+      border-top: 3px solid transparent;
+      font-size: 18px;
+      text-transform: uppercase;
+
+      &:hover {
+        color: @bekk-white;
+      }
+    }
+
+    > a.active {
+      color: @bekk-white;
+      border-top-color: @bekk-red;
+    }
+  }
+}
+
+.navigation-expandable {
+  height: @navigation-height;
+  transition: height .5s;
+}
+
+.toggleNav {
+  border-bottom: 8px solid @color-black;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+
+  height: 0;
+  background: transparent;
+  padding: 0;
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0;
+  border-top: 0;
+}
+
+.toggleNav:after {
+  content: "+";
+  color: @bekk-white;
+  font-size: 26px;
+  font-weight: bold;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navigationExpanded {
+  .toggleNav {
+    border-bottom: 40px solid @color-darkGray;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+  }
+
+  .toggleNav:after {
+    top: 5px;
+  }
+}
+
+.navigation-expandable:not(.navigationExpanded) {
+  .toggleNav:before {
+    content: "";
+    display: block;
+    position: relative;
+
+    border-top: 40px solid @color-darkGray;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+  }
+}
