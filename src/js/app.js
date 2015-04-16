@@ -1,7 +1,7 @@
 (function(document) {
 	'use strict';
 	var SocketModel = require('./socketModel.js');
-	var SocialcastView = require('./components/socialcast');
+	var SocialcastView = require('./components/socialcast.js');
 	var SoundView = require('./components/sound.js');
 	var DistanceView = require('./components/distance.js');
 
