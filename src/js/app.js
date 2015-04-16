@@ -1,13 +1,31 @@
 (function(document) {
 	'use strict';
 	var SocketModel = require('./socketModel.js');
-	var SocialcastView = require('./components/socialcast.js');
+	var SocialcastView = require('./components/socialcast');
+	var SoundView = require('./components/sound.js');
+	var DistanceView = require('./components/distance.js');
 
 	var ws = new SocketModel({
-		url: "ws://localhost:3000"
+		url: "ws://localhost:8013"
 	});
+
+
+	var ws2 = new SocketModel({
+		url: "ws://trappa.herokuapp.com"
+	});
+
+	
+
 	var socialcast = new SocialcastView({
 		el: document.querySelector('[data-component="socialcast"]'),
 		ws: ws
+	});
+	var sound = new SoundView({
+		el: document.querySelector('[data-component="sound"]'),
+		ws: ws2
+	});
+	var distance = new DistanceView({
+		el: document.querySelector('[data-component="distance"]'),
+		ws: ws2
 	});
 })(document);

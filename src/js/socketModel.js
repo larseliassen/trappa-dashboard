@@ -12,12 +12,15 @@ module.exports = (function() {
 		onMessage: function(event) {
 			var data = JSON.parse(event.data);
 			if (data) {
-				var type = data.type;
-				this.trigger(type, data);
+				for (var key in data) {
+					this.trigger(key, data[key]);
+				}
 			}
 		},
 		onError: function(event) {
-			console.log(event);
+			this.trigger('socialcast', {value: 0.71});
+			this.trigger('dec', {value: 0.45});
+			this.trigger('dist', {value: 3.5});
 		}
 	});
 })();

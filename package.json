@@ -24,8 +24,10 @@
     "gulp-jshint": "^1.10.0",
     "gulp-less": "^3.0.2",
     "gulp-sourcemaps": "^1.5.1",
+    "https": "^1.0.0",
     "jshint-stylish": "^1.0.1",
-    "svgify": "0.0.0"
+    "svgify": "0.0.0",
+    "ws": "^0.7.1"
   },
   "devDependencies": {
     "lodash": "^3.6.0"

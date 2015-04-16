@@ -12,7 +12,7 @@ var source = require('vinyl-source-stream');
 var svgify = require("svgify");
 
 var paths = {
-	scripts: ['src/vendors/**/*.js', 'src/js/**/*.js', 'src/js/app.js'],
+	scripts: ['src/vendors/**/*.js', 'src/js/**/*.js', 'src/js/**/*.svg', 'src/js/app.js'],
 	styles: ['src/less/style.less', 'src/less/**/*.less'],
 	assets: ['src/assets/*.*'],
 	dist: './dist/',

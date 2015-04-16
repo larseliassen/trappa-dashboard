@@ -7,12 +7,12 @@ module.exports = (function() {
 	return Simple.View.extend({
 		initialize: function(options) {
 			this.ws = options.ws;
-			this.ws.on('socialcast', this.onMessage.bind(this));
+			this.ws.on('dist', this.onMessage.bind(this));
 
-			this.onMessage({type: 'socialcast', value: 0.75});
+			//this.onMessage({type: 'socialcast', value: 0.75});
 		},
 		onMessage: function(data) {
-			this.render(data.value);
+			this.render(data);
 		},
 		render: function(value) {
 			var svgEl = this.$("svg");
@@ -30,7 +30,7 @@ module.exports = (function() {
 	            .append("g")
 	                .attr("transform", "translate(" + ((box.w / 2) + box.top) + "," + ((box.w / 2) + box.left) + ")");
 
-			//this.$('.keyfigure-value').innerHTML = (value * 100) + '%';
+			this.$('.keyfigure-value').innerHTML = value + ' m';
 		}
 	});
 })();
