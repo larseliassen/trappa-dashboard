@@ -54,13 +54,13 @@ module.exports = (function() {
 		},
 		onMessage: function(value) {
 			if (this.inst) {
-				var o = this.calculateNumber(value) / 100;
+				var o = this.calculateNumber(value);
 				this.inst.setSocialcast(o);
 				this.redraw();
 			}
 		},
 		calculateNumber: function(value) {
-			return (Math.log(value * 8)) * 3 || 0;
+			return Math.max(0, Math.min(1, value / 30));
 		},
 	});
 })();

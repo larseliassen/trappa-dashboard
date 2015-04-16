@@ -8,7 +8,7 @@ module.exports = (function() {
 		initialize: function(options) {
 			this.ws = options.ws;
 			this.ws.on('socialcast', this.onMessage.bind(this));
-
+			this.maxValue = 30;
 			this.render(0);
 
 			this.dial = new DialView({
@@ -19,17 +19,17 @@ module.exports = (function() {
 			this.update(data);
 		},
 		calculateNumber: function(value) {
-			return (Math.log(value * 8)) * 3 || 0;
+			return Math.max(0, Math.min(1, value / this.maxValue));
 		},
 		update: function(length) {
 			var value = this.calculateNumber(length);
 
-			this.$('.keyfigure-value').innerHTML = Math.round(value) + '%';
-			this.dial.update(value/100);
+			this.$('.keyfigure-value').innerHTML = Math.round(length) + ' tråder';
+			this.dial.update(value);
 		},
 		render: function(length) {
 			var value = this.calculateNumber(length);
-			this.$('.keyfigure-value').innerHTML = Math.round(value) + '%';
+			this.$('.keyfigure-value').innerHTML = Math.round(value) + ' tråder';
 		}
 		
 		

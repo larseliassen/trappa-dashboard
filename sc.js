@@ -42,12 +42,13 @@ wss.on('connection', function(ws) {
 
     var inter = setInterval(function(){
         fetchSCData(function(lulz) {
-            var data = Math.min(0, lulz.length/100000.).toString();
-            console.log(lulz.length);
+            //var data = Math.min(0, lulz.length/100000.).toString();
+            var data = JSON.parse(lulz);
+            console.log(data.messages.length);
             //console.log(temp + " " + dist + " " + desc  + " " + move);
             if (connected) {
                 ws.send(JSON.stringify({
-                    "socialcast": lulz.length
+                    "socialcast": data.messages.length
                 }));
             }
             
