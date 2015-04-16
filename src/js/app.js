@@ -4,6 +4,8 @@
 	var SocialcastView = require('./components/socialcast.js');
 	var SoundView = require('./components/sound.js');
 	var DistanceView = require('./components/distance.js');
+	var GraphView = require('./components/graph.js');
+
 
 	var ws = new SocketModel({
 		url: "ws://localhost:8013"
@@ -27,5 +29,11 @@
 	var distance = new DistanceView({
 		el: document.querySelector('[data-component="distance"]'),
 		ws: ws2
+	});
+
+	var grap = new GraphView({
+		el: document.querySelector('#waves'),
+		ws: ws,
+		ws2: ws2
 	});
 })(document);
