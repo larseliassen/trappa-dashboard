@@ -110,7 +110,7 @@ void theLine() {
         point(g, noiseVal3/1.5+3);
 
         //Small cricles
-        stroke(253, 253, 170); // GUL
+        stroke(279, 191, 178); // GUL
         ellipse(g, -noiseVal2/1.5-3, 2, 2);
         ellipse(g, noiseVal2/1.5+3, 2, 2);
 

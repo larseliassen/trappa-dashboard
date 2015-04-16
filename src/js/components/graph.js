@@ -27,9 +27,16 @@ module.exports = (function() {
 		onLoad: function() {
 			this.inst = Processing.getInstanceById("waves");
 		},
+		normaliseValue: function(value) {
+			return Math.sqrt((value / 2 * Math.sqrt(2))).toFixed(2);
+		},
+		getDialVaue: function(value) {
+			var decMax = Math.sqrt(362);
+			return Math.min(1, Math.max(0, value / decMax));
+		},
 		onDectMessage: function(value) {
 			if (this.inst) {
-				var o = value / 100;
+				var o = this.getDialVaue(this.normaliseValue(value));
 				this.inst.setDec(o);
 				this.redraw();
 			}
@@ -37,7 +44,10 @@ module.exports = (function() {
 		onDistMessage: function(value) {
 			
 			if (this.inst) {
-				var o = value / 1000;
+				if (value > 280) {
+					value = 0;
+				}
+				var o = Math.max(0, Math.min(1, value / 280));
 				this.inst.setDistance(o);
 				this.redraw();
 			}

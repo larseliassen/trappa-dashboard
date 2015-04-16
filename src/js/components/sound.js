@@ -17,10 +17,10 @@ module.exports = (function() {
 			this.render(data);
 		},
 		normaliseValue: function(value) {
-			return (value / 2 * Math.sqrt(2)).toFixed(2);
+			return Math.sqrt((value / 2 * Math.sqrt(2))).toFixed(2);
 		},
 		getDialVaue: function(value) {
-			var decMax = 362 / 2;
+			var decMax = Math.sqrt(362) * 2;
 			return Math.min(1, Math.max(0, value / decMax));
 		},
 		render: function(value) {

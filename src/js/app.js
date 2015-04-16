@@ -13,7 +13,7 @@
 
 
 	var ws2 = new SocketModel({
-		url: "ws://192.168.2.3:5000"
+		url: "ws://192.168.2.3:5000" // 192.168.2.3:5000 //trappa.herokuapp.com
 	});
 
 	
