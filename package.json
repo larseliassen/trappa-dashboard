@@ -27,7 +27,9 @@
     "https": "^1.0.0",
     "jshint-stylish": "^1.0.1",
     "svgify": "0.0.0",
-    "ws": "^0.7.1"
+    "ws": "^0.7.1",
+    "browserify": "^9.0.8",
+    "vinyl-source-stream": "^1.1.0"
   },
   "devDependencies": {
     "lodash": "^3.6.0"
