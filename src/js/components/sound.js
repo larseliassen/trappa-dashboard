@@ -11,7 +11,6 @@ module.exports = (function() {
 				el: this.el.querySelector("svg"),
 				maxValue: 140
 			});
-			//this.onMessage({type: 'socialcast', value: 0.75});
 		},
 		onMessage: function(data) {
 			this.render(data);

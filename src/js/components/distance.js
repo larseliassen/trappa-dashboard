@@ -15,20 +15,9 @@ module.exports = (function() {
 			this.render(data);
 		},
 		render: function(value) {
-			var svgEl = this.$("svg");
-			svgEl.appendChild(speedGraph());
-			var el = svgEl;
-
-			var box = {
-	            h: el.viewBox.baseVal.height,
-	            w: el.viewBox.baseVal.width,
-	            top: el.viewBox.baseVal.x,
-	            left: el.viewBox.baseVal.y
-	        };
-
-	        var svg = this.svg = d3.select(el)
-	            .append("g")
-	                .attr("transform", "translate(" + ((box.w / 2) + box.top) + "," + ((box.w / 2) + box.left) + ")");
+			var line = this.$('.keyfigure-bar--line');
+			var p = value / 10;
+			line.style.left = p + "%";
 
 			this.$('.keyfigure-value').innerHTML = value + ' m';
 		}
