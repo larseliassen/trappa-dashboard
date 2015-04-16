@@ -17,7 +17,7 @@ module.exports = (function() {
 			this.ws2.on('dec', this.onDectMessage.bind(this));
 
 
-			this.redraw = _.throttle(this.draw.bind(this), 1000);
+			this.redraw = _.throttle(this.draw.bind(this), 100);
 		},
 		draw: function() {
 			if (this.inst) {
@@ -31,7 +31,6 @@ module.exports = (function() {
 			if (this.inst) {
 				var o = value / 100;
 				this.inst.setDec(o);
-				console.log(o);
 				this.redraw();
 			}
 		},

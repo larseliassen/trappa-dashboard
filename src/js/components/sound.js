@@ -9,16 +9,24 @@ module.exports = (function() {
 			this.ws.on('dec', this.onMessage.bind(this));
 			this.dial = new DialView({
 				el: this.el.querySelector("svg"),
-				maxValue: 140
+				maxValue: 100,
+				color: '#28bcb3'
 			});
 		},
 		onMessage: function(data) {
 			this.render(data);
 		},
+		normaliseValue: function(value) {
+			return (value / 2 * Math.sqrt(2)).toFixed(2);
+		},
+		getDialVaue: function(value) {
+			var decMax = 362 / 2;
+			return Math.min(1, Math.max(0, value / decMax));
+		},
 		render: function(value) {
-			
-			this.dial.update(value/100);
-			this.$('.keyfigure-value').innerHTML = value + ' dec';
+			var val = this.normaliseValue(value)
+			this.dial.update(this.getDialVaue(val));
+			this.$('.keyfigure-value').innerHTML = val + ' dec';
 		}
 	});
 })();

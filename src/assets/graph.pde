@@ -11,7 +11,7 @@ int totalTime = 10;
 float strokeT = 1;
 
 void setup() {
-    size(w, h / 2);
+    size(w, h / 1.5);
     smooth();
     colorMode(RGB);
     //frameRate();
@@ -39,7 +39,7 @@ void setup() {
 }
 
 void draw() {
-    translate(0, h/4);
+    translate(0, h/3);
     theLine();
 }
 
@@ -99,7 +99,7 @@ void theLine() {
         }
 
         // Cricles
-        stroke(253, 253, 170); // GUL
+        stroke(244, 76, 89); // GUL
         noFill();
         strokeWeight(strokeT);
         ellipse(g, -noiseVal3/1.5-3, 8, 8);
@@ -116,7 +116,7 @@ void theLine() {
 
         //Fat line
         strokeWeight(2);
-        stroke(244, 76, 89); // RØD
+        stroke(253, 253, 170); // RØD
         line(g, noiseVal/2, g, -noiseVal/2);
 
         //Thin black line

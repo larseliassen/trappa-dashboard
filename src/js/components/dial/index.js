@@ -13,6 +13,8 @@ module.exports = (function() {
 			this.delay = 0;
 			this.duration = 1750;
 
+			this.color = options.color || "#df565b";
+
 			this.createDial();
 		},
 
@@ -42,7 +44,7 @@ module.exports = (function() {
 
 			this.arcPath = this.svg.append("path")
 				.attr({
-					"stroke": "#df565b",
+					"stroke": this.color,
 					"stroke-width": "3.4",
 					"transform": "rotate(-90)"
 				})

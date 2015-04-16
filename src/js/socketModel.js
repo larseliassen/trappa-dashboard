@@ -21,6 +21,8 @@ module.exports = (function() {
 			this.trigger('socialcast', {value: 0.71});
 			this.trigger('dec', {value: 0.45});
 			this.trigger('dist', {value: 3.5});
+
+			this.ws = new WebSocket(this.url);
 		}
 	});
 })();
