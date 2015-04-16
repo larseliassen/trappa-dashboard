@@ -1,3 +1,66 @@
+// Data stream
+float dataStream;
+//------------
+
+float g;
+int savedTime;
+int totalTime = 10;
+float strokeT = 1;
+
+void setup() {
+    size(w, h);
+    smooth();
+    colorMode(RGB);
+    //frameRate();
+    background(20);
+    strokeCap(ROUND);
+
+    savedTime = millis();
+
+    // Data stream
+    dataStream=.0;
+    //------------
+    socialcast=0;
+
+    var host = location.origin.replace(/^file/, 'ws');
+    var ws = new WebSocket("ws://localhost:8013/");
+    ws.onmessage = function(event) {
+        console.log(JSON.parse(event.data));
+        document.querySelector('#socialcast').firstChild.nodeValue = Math.min(Math.floor(event.data*100.),100);
+        document.querySelector('#socialcast-bar').style.width = Math.min(Math.floor(event.data*100.),100);
+        socialcast = float(event.data);
+        redraw();
+    };
+
+    noLoop();
+
+    g=0;
+}
+
+void draw() {
+    translate(0, h/2);
+    theLine();
+}
+
+void theLine() {
+
+    // Data stream
+    dataStream=dataStream+.01;
+    //------------
+
+    int passedTime = millis() - savedTime;
+
+    noiseSeed(13120);
+    float noiseVal = map(socialcast, 0, 1, 0, h/3);
+
+    noiseSeed(10130);
+    float noiseVal2 = map(noise(dataStream), 0, 1, 0, h/2);
+
+    noiseSeed(152);
+    float noiseVal3 = map(noise(dataStream), 0, 1, 0, h/2);
+
+    if (passedTime > totalTime) {
+
 // Thin line   
     stroke(100, 100, 100, 255); // GRÅ
     strokeWeight(strokeT);
@@ -43,3 +106,7 @@
     strokeWeight(1);
     stroke(30);
     line(g, noiseVal3/2, g, -noiseVal3/2);
+
+
+        savedTime = millis();
+    }
