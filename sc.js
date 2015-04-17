@@ -18,8 +18,8 @@ var temp,dist,desc,move;
 //     pw = result.password;
 // });
 
-var pw = "skuret1234";
-var un = "trappa@bekk.no";
+
+
 
 function onErr(err) {
     console.log("ERROR"  + err);
