@@ -18,6 +18,7 @@ var temp,dist,desc,move;
 //     pw = result.password;
 // });
 
+departure = new Date();
 
 
 
@@ -40,7 +41,18 @@ console.log('Im up');
 wss.on('connection', function(ws) {
     var connected = true;
 
-    var inter = setInterval(function(){
+    var ruterdata = setInterval(function() {
+
+        fetchRuterData(function(responsebody) {
+            var data = JSON.parse(responsebody);
+            departure = new Date(data[0].MonitoredVehicleJourney.MonitoredCall.AimedDepartureTime);
+            console.log('Bussen går om ' + ((new Date(departure) - new Date())/1000/60) + ' minutter.');
+        });    
+    }, 60000);
+    
+
+    var inter = setInterval(function(){        
+
         fetchSCData(function(lulz) {
             //var data = Math.min(0, lulz.length/100000.).toString();
             var data = JSON.parse(lulz);
@@ -48,7 +60,8 @@ wss.on('connection', function(ws) {
             //console.log(temp + " " + dist + " " + desc  + " " + move);
             if (connected) {
                 ws.send(JSON.stringify({
-                    "socialcast": data.messages.length
+                    "socialcast": data.messages.length,
+                    "departure": ((new Date(departure) - new Date())/1000/60)
                 }));
             }
             
@@ -71,6 +84,20 @@ function fetchSCData(callback) {
     var url = "socialcast.bekk.no";
     var path = "/api/streams/company/messages.json?since="  + Math.floor(date.getTime()/1000);
     getScData(url, path, callback);
+}
+
+function fetchRuterData(callback) {
+    var url = 'reisapi.ruter.no';
+    var path = '/stopvisit/getdepartures/3010071?json=true';
+    http.get({host: url, path: path}, function(response) {
+        var body = '';
+        response.on('data', function(d) {
+            body += d;
+        });
+        response.on('end', function() {
+            callback(body);
+        });
+    });
 }
 
 function getScData(url, path, callback) {

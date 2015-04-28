@@ -2,6 +2,7 @@
 	'use strict';
 	var SocketModel = require('./socketModel.js');
 	var SocialcastView = require('./components/socialcast.js');
+	var BussenView = require('./components/bussen.js');
 	var SoundView = require('./components/sound.js');
 	var DistanceView = require('./components/distance.js');
 	var GraphView = require('./components/graph.js');
@@ -13,10 +14,13 @@
 
 
 	var ws2 = new SocketModel({
-		url: "ws://192.168.2.3:5000" // 192.168.2.3:5000 //trappa.herokuapp.com
+		url: "ws://trappa.herokuapp.com"
 	});
 
-	
+	var bussen = new BussenView({
+		el: document.querySelector('[data-component="bussen"]'),
+		ws: ws
+	});
 
 	var socialcast = new SocialcastView({
 		el: document.querySelector('[data-component="socialcast"]'),
