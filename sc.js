@@ -5,6 +5,9 @@ var http = require('https');
 
 var temp,dist,desc,move;
 
+un="trappa@bekk.no";
+pw="skuret1234";
+
 //var prompt = require('prompt');
 
 //prompt.start();
@@ -42,30 +45,39 @@ wss.on('connection', function(ws) {
     var connected = true;
 
     var ruterdata = setInterval(function() {
-
-        fetchRuterData(function(responsebody) {
-            var data = JSON.parse(responsebody);
-            departure = new Date(data[0].MonitoredVehicleJourney.MonitoredCall.AimedDepartureTime);
-            console.log('Bussen går om ' + ((new Date(departure) - new Date())/1000/60) + ' minutter.');
-        });    
-    }, 60000);
+        try {
+            ruterData()
+        } catch (e) {
+            console.log(e);
+        }
+    }, 300000);
+    ruterData();
     
 
-    var inter = setInterval(function(){        
+    var inter = setInterval(function(){ 
 
-        fetchSCData(function(lulz) {
-            //var data = Math.min(0, lulz.length/100000.).toString();
-            var data = JSON.parse(lulz);
-            console.log(data.messages.length);
-            //console.log(temp + " " + dist + " " + desc  + " " + move);
-            if (connected) {
-                ws.send(JSON.stringify({
-                    "socialcast": data.messages.length,
-                    "departure": ((new Date(departure) - new Date())/1000/60)
-                }));
-            }
-            
-        });
+        try {       
+
+            fetchSCData(function(lulz) {
+                //var data = Math.min(0, lulz.length/100000.).toString();
+                var data = JSON.parse(lulz);
+                console.log("Departure" + departure);            
+                console.log("Now" + new Date());            
+                if(departure < new Date()) {
+                    ruterData();
+                }
+                //console.log(temp + " " + dist + " " + desc  + " " + move);
+                if (connected) {
+                    ws.send(JSON.stringify({
+                        "socialcast": data.messages.length,
+                        "departure": ((new Date(departure) - new Date())/1000/60)
+                    }));
+                }
+                
+            });
+        } catch (e) {
+            console.log(e);
+        }
 
     }, 1000);
 
@@ -84,6 +96,17 @@ function fetchSCData(callback) {
     var url = "socialcast.bekk.no";
     var path = "/api/streams/company/messages.json?since="  + Math.floor(date.getTime()/1000);
     getScData(url, path, callback);
+}
+
+function ruterData() {
+    fetchRuterData(function(responsebody) {        
+        var data = JSON.parse(responsebody);
+        departure = new Date(data[0].MonitoredVehicleJourney.MonitoredCall.AimedDepartureTime);
+        if(departure < new Date()) {
+            departure = new Date(data[1].MonitoredVehicleJourney.MonitoredCall.AimedDepartureTime);
+        }
+        console.log('Bussen går om ' + ((new Date(departure) - new Date())/1000/60) + ' minutter.');
+    });    
 }
 
 function fetchRuterData(callback) {

@@ -14,7 +14,7 @@
 
 
 	var ws2 = new SocketModel({
-		url: "ws://trappa.herokuapp.com"
+		url: "ws://192.168.2.3:5000"
 	});
 
 	var bussen = new BussenView({
