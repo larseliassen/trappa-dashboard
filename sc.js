@@ -49,8 +49,10 @@ wss.on('connection', function(ws) {
             ruterData()
         } catch (e) {
             console.log(e);
+            return;
         }
     }, 300000);
+
     ruterData();
     
 
@@ -60,7 +62,12 @@ wss.on('connection', function(ws) {
 
             fetchSCData(function(lulz) {
                 //var data = Math.min(0, lulz.length/100000.).toString();
-                var data = JSON.parse(lulz);
+                try {
+                    var data = JSON.parse(lulz);
+                } catch (e) {
+                    console.log(e);
+                    return;
+                }
                 console.log("Departure" + departure);            
                 console.log("Now" + new Date());            
                 if(departure < new Date()) {
@@ -77,6 +84,7 @@ wss.on('connection', function(ws) {
             });
         } catch (e) {
             console.log(e);
+            return;
         }
 
     }, 1000);
@@ -92,20 +100,25 @@ wss.on('connection', function(ws) {
 
 function fetchSCData(callback) {
     var date = new Date();
-    date.setMinutes(date.getMinutes() - 5);
+    date.setMinutes(date.getMinutes() - 60);
     var url = "socialcast.bekk.no";
     var path = "/api/streams/company/messages.json?since="  + Math.floor(date.getTime()/1000);
     getScData(url, path, callback);
 }
 
 function ruterData() {
-    fetchRuterData(function(responsebody) {        
-        var data = JSON.parse(responsebody);
-        departure = new Date(data[0].MonitoredVehicleJourney.MonitoredCall.AimedDepartureTime);
+    fetchRuterData(function(responsebody) {
+        try {
+            var data = JSON.parse(responsebody);
+            departure = new Date(data[0].MonitoredVehicleJourney.MonitoredCall.AimedDepartureTime);
         if(departure < new Date()) {
             departure = new Date(data[1].MonitoredVehicleJourney.MonitoredCall.AimedDepartureTime);
         }
         console.log('Bussen går om ' + ((new Date(departure) - new Date())/1000/60) + ' minutter.');
+        } catch (e) {
+            console.log(e);
+            return;
+        }        
     });    
 }
 

@@ -14,7 +14,7 @@
 
 
 	var ws2 = new SocketModel({
-		url: "ws://192.168.2.3:5000"
+		url: "ws://10.0.20.158:5000"
 	});
 
 	var bussen = new BussenView({
