@@ -5,8 +5,6 @@ var http = require('https');
 
 var temp,dist,desc,move;
 
-un="trappa@bekk.no";
-pw="skuret1234";
 
 //var prompt = require('prompt');
 
